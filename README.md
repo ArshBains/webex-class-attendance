@@ -1,7 +1,8 @@
-# webex-class-attendance 
-use participants panel image(s) to take attendance of students
+# webex/zoom-class-attendance 
 
-### Installing 
+## `Method I`
+Use participants panel image(s) to take attendance of students
+### Installation
 ```
 pip install pytesseract
 ```
@@ -10,11 +11,20 @@ tesseract-ocr (64-bit) : https://digi.bib.uni-mannheim.de/tesseract/tesseract-oc
 PicPick (for scrolling screenshot) : https://picpick.app/en/download
 
 ### Configure
-Set the variables in script.py
+Set the variables in `script-ocr.py`
 | Variable | Line | For |
 | ------ | ------ | -----|
 | pytesseract.pytesseract.tesseract_cmd | 8 | full path to your tesseract executable |
 | image_dir | 10 | webex participants images folder |
 | last_roll | 11 | roll no. of last student |
 
- 
+## `Method II`
+This only works for Webex currently.
+- Join webex meeting in browser 
+- Copy and run `script-webex-browser.js` in the console
+
+
+
+| Variable | Line | For |
+| ------ | ------ | -----|
+| last_roll | 1 | roll no. of last student |
