@@ -17,7 +17,7 @@ for image in os.listdir(image_dir):
     print(image)
     data = pytesseract.image_to_string(Image.open(image_dir.joinpath(image)))
     # print(data)
-    UE = re.findall(r"\d{2,}", data)
+    UE = re.findall(r"\d{1,}", data)
     # print(UE)
     y = []
     for i in UE:
