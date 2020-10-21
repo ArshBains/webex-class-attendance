@@ -7,7 +7,7 @@ from datetime import date
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
-image_dir = Path("dump")     # Folder where participants images are stored
+image_dir = Path("../dump")     # Folder where participants images are stored
 last_roll = 64      # Roll number of last student
 
 students = [*range(1, last_roll + 1, 1)]
@@ -17,10 +17,12 @@ for image in os.listdir(image_dir):
     print(image)
     data = pytesseract.image_to_string(Image.open(image_dir.joinpath(image)))
     # print(data)
-    UE = re.findall(r"\d{2}\b", data)
+    UE = re.findall(r"\d{2,}", data)
     # print(UE)
     y = []
     for i in UE:
+        if len(i)>2:
+            i = i[-2:]
         y.append(int(i))
     print(y)
     print("----------------------------------------------------------------------------------------------------------")
