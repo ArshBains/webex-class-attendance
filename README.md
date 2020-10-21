@@ -1,4 +1,5 @@
-# webex-class-attendance
+# webex-class-attendance 
+use participants panel image(s) to take attendance of students
 
 ### Installing 
 ```
