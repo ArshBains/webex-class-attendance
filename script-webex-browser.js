@@ -28,7 +28,9 @@ students.splice(0, 1);
 // console.log(students);
 for (i = 0; i < roll_nos.length; i++) {
   var index = students.indexOf(roll_nos[i]);
-  students.splice(index, 1);
+  if (index !== -1){
+    students.splice(index, 1);
+  }  
 }
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
