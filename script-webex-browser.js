@@ -2,7 +2,7 @@ var last_roll = 64
 
 var participants = document.querySelectorAll(".styles-user-name-gpTpQ")
 var names = []
-for (i = 0; i < participants.length; i+=2) {
+for (i = 0; i < participants.length; i++) {
   names.push(document.querySelectorAll(".styles-user-name-gpTpQ")[i].innerText)
 }
 // console.log(names)
@@ -21,7 +21,7 @@ for (i = 0; i < names.length; i++) {
  roll_nos.push(parseInt(roll_no[0]))
 }
 roll_nos.sort(function(a, b){return a-b})
-roll_nos = roll_nos.filter(x => x < last_roll)
+roll_nos = roll_nos.filter(x => x <= last_roll)
 
 var students = [...Array(last_roll + 1).keys()]
 students.splice(0, 1);
