@@ -3,7 +3,7 @@ var last_roll = 64
 var participants = document.querySelectorAll(".styles-user-name-gpTpQ")
 var names = []
 for (i = 0; i < participants.length; i++) {
-  names.push(document.querySelectorAll(".styles-user-name-gpTpQ")[i].innerText)
+  names.push(participants[i].innerText)
 }
 // console.log(names)
 var roll_nos = []
@@ -34,7 +34,7 @@ for (i = 0; i < roll_nos.length; i++) {
 }
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
 var yyyy = today.getFullYear();
 today = dd + '/' + mm + '/' + yyyy;
 console.log(today);
